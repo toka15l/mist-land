@@ -1,24 +1,30 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Mist Land (working title) is a exploration game using ASCII text.
 
-Things you may want to cover:
+## Stack
 
-* Ruby version
+- Ruby on Rails backend
+- React frontend
+  - TailwindCSS
+- Inertia adaptor between Rails/React
 
-* System dependencies
+## Install
 
-* Configuration
+```shell
+bundle install
+```
 
-* Database creation
+## Run (development)
 
-* Database initialization
+### Backend
 
-* How to run the test suite
+```shell
+bin/rails server
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+### Frontend
 
-* Deployment instructions
-
-* ...
+```shell
+bin/dev
+```
