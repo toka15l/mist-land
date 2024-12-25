@@ -3,7 +3,7 @@
 class WorldController < ApplicationController
   def index
     render inertia: 'World', props: {
-      chunk: Chunk.first.tiles
+      chunk: {tiles: Chunk.first.tiles}
     }
   end
 end
