@@ -10,9 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2024_12_23_225611) do
+ActiveRecord::Schema[8.0].define(version: 2024_12_25_220450) do
   create_table "chunks", force: :cascade do |t|
     t.string "tiles"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "tiles", force: :cascade do |t|
+    t.string "display"
+    t.string "color"
+    t.string "bg_color"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
