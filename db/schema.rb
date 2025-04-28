@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2024_12_25_220450) do
+ActiveRecord::Schema[8.0].define(version: 2024_12_27_012148) do
   create_table "chunks", force: :cascade do |t|
     t.string "tiles"
     t.datetime "created_at", null: false
@@ -21,6 +21,19 @@ ActiveRecord::Schema[8.0].define(version: 2024_12_25_220450) do
     t.string "display"
     t.string "color"
     t.string "bg_color"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "tiles_traits", id: false, force: :cascade do |t|
+    t.integer "tile_id"
+    t.integer "trait_id"
+    t.index ["tile_id"], name: "index_tiles_traits_on_tile_id"
+    t.index ["trait_id"], name: "index_tiles_traits_on_trait_id"
+  end
+
+  create_table "traits", force: :cascade do |t|
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
